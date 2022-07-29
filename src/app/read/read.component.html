@@ -1,0 +1,26 @@
+<button (click)="onRead()">Refresh Data </button>
+<div>
+    <form [formGroup]="productForm">
+
+        <table>
+            <tr *ngFor="let object of dataSource">
+                <th> 
+                    <input id="editName{{object.id}}" type="text" value={{object.id}}/>
+                </th>
+                <th> 
+                    <input id="editName{{object.Name}}" type="text" value={{object.Name}}/>
+                </th>
+                <th>
+                    <input id="editComplaint{{object.Complaint}}" type="text" value={{object.Complaint}}/>
+                </th>
+                <th>
+                    <button (click)="editButton(object)">Edit</button>
+                </th>
+                <th>
+                    <button (click)="deleteButton(object)">Delete</button>
+                </th>
+            </tr>
+        </table>
+    
+    </form>
+</div>

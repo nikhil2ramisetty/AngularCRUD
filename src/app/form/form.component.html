@@ -1,0 +1,11 @@
+<!-- <p>form works!</p> -->
+<form [formGroup]="productForm">
+    <label>Name</label>
+    <br />
+    <input formControlName="Name" type="textbox" />
+    <br>
+    <label>Complaint</label>
+    <br>
+    <input formControlName="Complaint" type="textbox" />
+    <button (click)="onClick()">Submit</button>
+  </form>
